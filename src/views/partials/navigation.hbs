@@ -1,0 +1,26 @@
+<header>
+  <nav>
+    <div class="nav-wrapper purple darken-4">
+      <div class="container">
+        <a href="#" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Menu<i class="material-icons right">arrow_drop_down</i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<ul id="dropdown1" class="dropdown-content">
+  {{#if user}}
+  <li><a href="/notes" class="waves-effect">All notes</a></li>
+  <li><a href="/notes/add" class="waves-effect">Add note</a></li>
+  <li class="divider"></li>
+  <li><a href="/users/logout" class="waves-effect">Log out</a></li>
+  {{else}}
+  <li><a href="/users/signup" class="waves-effect">Sign up</a></li>
+  <li><a href="/users/login" class="waves-effect">Log in</a></li>
+  {{/if}}
+</ul>

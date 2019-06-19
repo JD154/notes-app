@@ -1,0 +1,39 @@
+  <div class="container">
+    <div class="row">
+      {{#each notes}}
+        <div class="col s12 m4">
+          <div class="card small">
+            <div class="card-content">
+              <p> {{date}} </p>
+              <span class="card-title"> {{title}} </span>
+              <p> {{content}} </p>
+            </div>
+            <div class="card-action center-align">
+              <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <button href="#" type="submit" class="waves-effect waves-dark btn-flat">Delete</button>
+              </form>
+              <a href="/notes/edit/{{_id}}" class="waves-effect waves-dark btn-small">Edit</a>
+            </div>
+          </div>
+        </div>
+      {{else}}
+      <div class="col s12 m4 offset-m4">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Nothing to show!</span>
+            <p>Create a new note by clicking on the following button</p>
+          </div>
+          <div class="card-action center-align">
+            <a href="/notes/add" class="waves-effect waves-dark btn">Add note</a>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+    <div class="fixed-action-btn">
+      <a href="/notes/add" class="btn-floating btn-large red">
+        <i class="large material-icons">add</i>
+      </a>
+    </div>
+  </div>

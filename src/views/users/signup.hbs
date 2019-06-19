@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12 m6 offset-m3">
+      <form action="/users/signup" method="POST" class="card">
+        <div class="card-content">
+          <div class="row">
+            <div class="input-field col s12">
+              <input value="{{username}}" name="username" type="text" class="validate" required>
+              <label for="username">Username</label>
+            </div>  
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input value="{{email}}" name="email" type="email" class="validate" required>
+              <label for="email">Email</label>
+            </div>  
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input name="password" type="password" class="validate" required>
+              <label for="password">Password</label>
+            </div>  
+            <div class="input-field col s6">
+              <input name="passwordRepeat" type="password" class="validate" required>
+              <label for="passwordRepeat">Confirm password</label>
+            </div>  
+          </div>
+        </div>
+        <div class="card-action center-align">
+          <button type="submit" class="waves-effect waves-light btn">Sign up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
